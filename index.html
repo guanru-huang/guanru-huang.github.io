@@ -194,7 +194,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-06-11 01:09:39" itemprop="dateModified" datetime="2021-06-11T01:09:39+08:00">2021-06-11</time>
+                <time title="Modified: 2021-06-11 01:31:45" itemprop="dateModified" datetime="2021-06-11T01:31:45+08:00">2021-06-11</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -231,22 +231,6 @@
 <li><code>kubectl exec -it &lt;pod-name&gt;</code>: Enter the interactive mode of the container application and troubleshoot. It may be that the application runs and completes very quickly, causing the Pod to never be ready, as the container has already been destroyed after completion. </li>
 <li>Use container probes: Use a kind of probe, such as <code>livenessProbe</code>, <code>readinessProbe</code> and <code>startupProbe</code> with a certain handler <code>ExecAction</code>, <code>TCPSocketAction</code> and <code>HTTPGetAction</code> to internally check the container. The method is to include these probes inside the yaml file. If the probe results in <strong>Failure</strong>, you can troubleshoot and identify the root cause. </li>
 </ol>
-<h3 id="Probes"><a href="#Probes" class="headerlink" title="Probes:"></a>Probes:</h3><ul>
-<li><p><code>livenessProbe</code>: Indicates whether the container is running. If the liveness probe fails, the kubelet kills the container, and the container is subjected to its restart policy. If a Container does not provide a liveness probe, the default state is Success.</p>
-</li>
-<li><p><code>readinessProbe</code>: Indicates whether the container is ready to respond to requests. If the readiness probe fails, the endpoints controller removes the Pod’s IP address from the endpoints of all Services that match the Pod. The default state of readiness before the initial delay is Failure. If a Container does not provide a readiness probe, the default state is Success.</p>
-</li>
-<li><p><code>startupProbe</code>: Indicates whether the application within the container is started. All other probes are disabled if a startup probe is provided, until it succeeds. If the startup probe fails, the kubelet kills the container, and the container is subjected to its restart policy. If a Container does not provide a startup probe, the default state is Success.</p>
-</li>
-</ul>
-<h3 id="Handlers"><a href="#Handlers" class="headerlink" title="Handlers"></a>Handlers</h3><ul>
-<li><p><code>ExecAction</code>: Executes a specified command inside the container. The diagnostic is considered successful if the command exits with a status code of 0.</p>
-</li>
-<li><p><code>TCPSocketAction</code>: Performs a TCP check against the Pod’s IP address on a specified port. The diagnostic is considered successful if the port is open.</p>
-</li>
-<li><p><code>HTTPGetAction</code>: Performs an HTTP GET request against the Pod’s IP address on a specified port and path. The diagnostic is considered successful if the response has a status code greater than or equal to 200 and less than 400.</p>
-</li>
-</ul>
 <h2 id="Troubleshooting-from-the-Cluster-level"><a href="#Troubleshooting-from-the-Cluster-level" class="headerlink" title="Troubleshooting from the Cluster level"></a>Troubleshooting from the Cluster level</h2><ol>
 <li><code>kubectl config current-context</code>: to see the current cluster. It is possible that there are multiple clusters. Be sure to be in the cluster you want to troubleshoot. </li>
 <li><code>kubectl config view</code>: to see the complete configuration of the cluster. </li>

@@ -177,7 +177,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2021/06/10/How-to-Troubleshoot-Kubernetes-Cluster/" class="post-title-link" itemprop="url">How to Troubleshoot Kubernetes Cluster?</a>
+            <a href="/2021/06/10/How-to-Troubleshoot-Kubernetes-Cluster/" class="post-title-link" itemprop="url">How to Troubleshoot Kubernetes?</a>
         </h2>
 
         <div class="post-meta">
@@ -194,7 +194,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-06-11 01:06:44" itemprop="dateModified" datetime="2021-06-11T01:06:44+08:00">2021-06-11</time>
+                <time title="Modified: 2021-06-11 01:07:26" itemprop="dateModified" datetime="2021-06-11T01:07:26+08:00">2021-06-11</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -221,7 +221,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="1-How-to-troubleshoot-a-Kubernetes-Cluster"><a href="#1-How-to-troubleshoot-a-Kubernetes-Cluster" class="headerlink" title="1 How to troubleshoot a Kubernetes Cluster?"></a>1 How to troubleshoot a Kubernetes Cluster?</h1><p>When a pod is in the phase of “Failed” or in a “Running” phase but never ready, there are four general directions to troubleshoot this error: from the pod level, from the container level, from the cluster level, and from the host/node level. </p>
+          <h1 id="1-How-to-troubleshoot-Kubernetes"><a href="#1-How-to-troubleshoot-Kubernetes" class="headerlink" title="1 How to troubleshoot Kubernetes?"></a>1 How to troubleshoot Kubernetes?</h1><p>When a pod is in the phase of “Failed” or in a “Running” phase but never ready, there are four general directions to troubleshoot this error: from the pod level, from the container level, from the cluster level, and from the host/node level. </p>
 <h2 id="1-1-Troubleshooting-from-the-Pod-level"><a href="#1-1-Troubleshooting-from-the-Pod-level" class="headerlink" title="1-1 Troubleshooting from the Pod level"></a>1-1 Troubleshooting from the Pod level</h2><ol>
 <li><code>kubectl descibe &lt;pod-name&gt;</code> : The first step of troubleshooting is to inspect the Pod by using the <code>kubectl describe &lt;pod-name&gt;</code> command to print the <code>Pod</code> object, which includes the <code>PodStatus</code> object and the <code>PodCondition</code> object within <code>PodStatus</code> object. The <code>PodCondition</code> object includes the fields of <code>reason</code> and <code>message</code>, which indicates the reason and details for the condition’s last transition.</li>
 <li>Syntax valiadation: Check whether there are typos or wrong hierarchies within the yaml files. Oftentimes, typos and wrong cases are reasons why pod creation is not successful. Use <code>kubectl explain pod.spec</code> or official website to view the API documentation for pods and compare the yaml files. </li>

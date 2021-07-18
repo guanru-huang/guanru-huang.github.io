@@ -22,13 +22,13 @@
 
   <meta name="description" content="What is Jenkins?An automation server to facilitate your software development lifecycle, by building, testing, packaging and deploying your code. It provides a feedback loop to make your development cy">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Building CI&#x2F;CD Pipelines with Jenkins">
+<meta property="og:title" content="Building CI&#x2F;CD Pipelines with Jenkins, JFrog, Sonarqube,">
 <meta property="og:url" content="https://guanru-huang.github.io/2021/07/18/Building-CI-CD-Pipelines-with-Jenkins/index.html">
 <meta property="og:site_name" content="Learn. Apply. Fun.">
 <meta property="og:description" content="What is Jenkins?An automation server to facilitate your software development lifecycle, by building, testing, packaging and deploying your code. It provides a feedback loop to make your development cy">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-07-18T04:46:18.000Z">
-<meta property="article:modified_time" content="2021-07-18T07:05:19.442Z">
+<meta property="article:modified_time" content="2021-07-18T07:07:39.024Z">
 <meta property="article:author" content="Guan-ru Huang">
 <meta name="twitter:card" content="summary">
 
@@ -45,7 +45,7 @@
   };
 </script>
 
-  <title>Building CI/CD Pipelines with Jenkins | Learn. Apply. Fun.</title>
+  <title>Building CI/CD Pipelines with Jenkins, JFrog, Sonarqube, | Learn. Apply. Fun.</title>
   
 
 
@@ -179,7 +179,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Building CI/CD Pipelines with Jenkins
+          Building CI/CD Pipelines with Jenkins, JFrog, Sonarqube,
         </h1>
 
         <div class="post-meta">
@@ -190,7 +190,7 @@
               <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="Created: 2021-07-18 12:46:18 / Modified: 15:05:19" itemprop="dateCreated datePublished" datetime="2021-07-18T12:46:18+08:00">2021-07-18</time>
+              <time title="Created: 2021-07-18 12:46:18 / Modified: 15:07:39" itemprop="dateCreated datePublished" datetime="2021-07-18T12:46:18+08:00">2021-07-18</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -219,7 +219,7 @@
       
         <h1 id="What-is-Jenkins"><a href="#What-is-Jenkins" class="headerlink" title="What is Jenkins?"></a>What is Jenkins?</h1><p>An automation server to facilitate your software development lifecycle, by building, testing, packaging and deploying your code. It provides a feedback loop to make your development cycle faster.  </p>
 <h2 id="Install-Jenkins"><a href="#Install-Jenkins" class="headerlink" title="Install Jenkins"></a>Install Jenkins</h2><p>For RHEL Linux, it is very simple. Jenkins is written in Java, so Java runtime is needed. </p>
-<p><code>code</code><br>sudo wget -O /etc/yum.repos.d/jenkins.repo <br>    <a target="_blank" rel="noopener" href="https://pkg.jenkins.io/redhat-stable/jenkins.repo">https://pkg.jenkins.io/redhat-stable/jenkins.repo</a><br>sudo rpm –import <a target="_blank" rel="noopener" href="https://pkg.jenkins.io/redhat-stable/jenkins.io.key">https://pkg.jenkins.io/redhat-stable/jenkins.io.key</a><br>sudo yum upgrade<br>sudo yum install jenkins java-11-openjdk-devel<br>sudo systemctl daemon-reload<br><code>code</code></p>
+<p><code>sudo wget -O /etc/yum.repos.d/jenkins.repo \     https://pkg.jenkins.io/redhat-stable/jenkins.repo sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key sudo yum upgrade sudo yum install jenkins java-11-openjdk-devel sudo systemctl daemon-reload</code></p>
 
     </div>
 

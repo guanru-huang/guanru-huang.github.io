@@ -20,15 +20,15 @@
     var CONFIG = {"hostname":"guanru-huang.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="Writing is Thinking.">
+  <meta name="description" content="What is Jenkins?An automation server to facilitate your software development lifecycle, by building, testing, packaging and deploying your code. It provides a feedback loop to make your development cy">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Building CI&#x2F;CD Pipelines with Jenkins">
 <meta property="og:url" content="https://guanru-huang.github.io/2021/07/18/Building-CI-CD-Pipelines-with-Jenkins/index.html">
 <meta property="og:site_name" content="Learn. Apply. Fun.">
-<meta property="og:description" content="Writing is Thinking.">
+<meta property="og:description" content="What is Jenkins?An automation server to facilitate your software development lifecycle, by building, testing, packaging and deploying your code. It provides a feedback loop to make your development cy">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-07-18T04:46:18.000Z">
-<meta property="article:modified_time" content="2021-07-18T04:46:18.622Z">
+<meta property="article:modified_time" content="2021-07-18T07:05:19.442Z">
 <meta property="article:author" content="Guan-ru Huang">
 <meta name="twitter:card" content="summary">
 
@@ -188,8 +188,22 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
+              
 
-              <time title="Created: 2021-07-18 12:46:18" itemprop="dateCreated datePublished" datetime="2021-07-18T12:46:18+08:00">2021-07-18</time>
+              <time title="Created: 2021-07-18 12:46:18 / Modified: 15:05:19" itemprop="dateCreated datePublished" datetime="2021-07-18T12:46:18+08:00">2021-07-18</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/DevOps/" itemprop="url" rel="index"><span itemprop="name">DevOps</span></a>
+                </span>
+                  , 
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/DevOps/Jenkins/" itemprop="url" rel="index"><span itemprop="name">Jenkins</span></a>
+                </span>
             </span>
 
           
@@ -203,7 +217,10 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        
+        <h1 id="What-is-Jenkins"><a href="#What-is-Jenkins" class="headerlink" title="What is Jenkins?"></a>What is Jenkins?</h1><p>An automation server to facilitate your software development lifecycle, by building, testing, packaging and deploying your code. It provides a feedback loop to make your development cycle faster.  </p>
+<h2 id="Install-Jenkins"><a href="#Install-Jenkins" class="headerlink" title="Install Jenkins"></a>Install Jenkins</h2><p>For RHEL Linux, it is very simple. Jenkins is written in Java, so Java runtime is needed. </p>
+<p><code>code</code><br>sudo wget -O /etc/yum.repos.d/jenkins.repo <br>    <a target="_blank" rel="noopener" href="https://pkg.jenkins.io/redhat-stable/jenkins.repo">https://pkg.jenkins.io/redhat-stable/jenkins.repo</a><br>sudo rpm –import <a target="_blank" rel="noopener" href="https://pkg.jenkins.io/redhat-stable/jenkins.io.key">https://pkg.jenkins.io/redhat-stable/jenkins.io.key</a><br>sudo yum upgrade<br>sudo yum install jenkins java-11-openjdk-devel<br>sudo systemctl daemon-reload<br><code>code</code></p>
+
     </div>
 
     
@@ -280,6 +297,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#What-is-Jenkins"><span class="nav-number">1.</span> <span class="nav-text">What is Jenkins?</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Install-Jenkins"><span class="nav-number">1.1.</span> <span class="nav-text">Install Jenkins</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -302,7 +320,7 @@
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-count">8</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
